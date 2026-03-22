@@ -1,12 +1,11 @@
-CC=gcc
-CFLAGS = -g -Wall
-TARGET = notebook
-SRC = notebook.c
-	
-all: $(TARGET)
+OBJS=notebook.o
 
-$(TARGET): $(SRC)
-	$(CC) $(CFLAGS) -o $@ $^
+notebook: $(OBJS)
+	$(CC) -o $@ $(OBJS)
 
+notebook.o:notebook.c
+	$(CC) -c $<
+
+.PHONY:clean
 clean:
-	rm -f $(TARGET)
+	$(RM) -f * .o

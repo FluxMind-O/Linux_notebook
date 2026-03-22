@@ -17,7 +17,7 @@ int main(int argc,char*argv[]){
      char buf_input[MAX_IN]={0};       //输入缓冲区
 
      printf("====Linux记事本====\n");
-     printf("自动保存,输入 :q 退出程序\n");
+     printf("自动保存,按回车后输入 :q 退出程序\n");
      printf("保存的文件是:%s\n",x_filename);
      printf("===================\n");
 
